@@ -1,3 +1,5 @@
+// use hashset to store num[i], judge if hashset contains current nums[i], 
+// if true, return true, else add nums[i] into hashset.
 public class Solution {
     public boolean containsDuplicate(int[] nums) {
         if(nums == null || nums.length == 0) return false;

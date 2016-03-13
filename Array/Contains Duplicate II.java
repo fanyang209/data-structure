@@ -1,3 +1,7 @@
+// use hashtable store nums[i] as key, index as value. if there is 
+// is no key the same as before. put in hashmap, else compare  
+// difference between index and current index if it is within k.  
+
 public class Solution {
     public boolean containsNearbyDuplicate(int[] nums, int k) {
         HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
