@@ -1,4 +1,3 @@
-// use % to calculate last digit, / to calculate carry. if there is a carry in the first digit, create a new array
 public class Solution {
     public int[] plusOne(int[] digits) {
         if(digits == null || digits.length == 0) return digits;
