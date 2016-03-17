@@ -1,3 +1,6 @@
+// use hashmap, nums[i] as key, times of same number as value. if times more than half
+// of length, it is majority number.
+
 public class Solution {
     public int majorityElement(int[] nums) {
         

@@ -1,3 +1,5 @@
+//  because nums1 has enough space, comparing array from last number and put in nums1 from end to front  
+
 public class Solution {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         while(m > 0 && n > 0){

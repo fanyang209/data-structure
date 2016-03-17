@@ -1,3 +1,6 @@
+//  add the first and last element of every row to 1, other elements equals to 
+//  corresponding sum of two consecutive elements of previous row 
+
 public class Solution {
     public List<List<Integer>> generate(int numRows) {
         

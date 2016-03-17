@@ -1,3 +1,5 @@
+// use hashmap, nums[i] as key, i as value, iterate nums, every time check if map containskey target - nums[i], if yes, find it,
+// otherwise put nums[i] into map
 public class Solution {
     public int[] twoSum(int[] nums, int target) {
         if(nums == null || nums.length == 0) return nums;
