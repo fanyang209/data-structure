@@ -1,3 +1,6 @@
+// two pointers, one for iteration, another to track the position
+// of different elements, if nums[i] == nums[length], continue,
+// otherwise override duplicated number.
 public class Solution {
     public int removeDuplicates(int[] nums) {
         if(nums == null || nums.length == 0) return 0;

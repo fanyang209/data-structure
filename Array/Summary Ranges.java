@@ -1,3 +1,5 @@
+//  two pointers, one for iteration, another for tracking the first element of the range,
+// if nums[i] + 1 == nums[i + 1], continue, otherwise it is the end of the range.
 public class Solution {
     public List<String> summaryRanges(int[] nums) {
         

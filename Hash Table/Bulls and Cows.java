@@ -1,3 +1,7 @@
+// no hashtable, use a new array length of 10 to store cows,
+// a for loop to iterate the array, if it's not bull, sotre
+// the secret and guess number to it's corresponding position
+// in the new array
 public class Solution {
      public String getHint(String secret, String guess) {
          
@@ -14,16 +18,14 @@ public class Solution {
                 countA++;
             } else {
                 count[secret.charAt(i) - '0']++;
-                if (count[secret.charAt(i) - '0'] <= 0) {
-                    countB++;
-                }
+                if (count[secret.charAt(i) - '0'] <= 0)  countB++;
+                
                 count[guess.charAt(i)- '0']--;
-                if (count[guess.charAt(i)- '0'] >= 0) {
-                    countB++;
-                }
+                if (count[guess.charAt(i)- '0'] >= 0)  countB++;
+                
             }
         }
          
-        return String.valueOf(countA) + "A" + String.valueOf(countB) + "B";
+        return countA + "A" + countB + "B";
     }
 }
