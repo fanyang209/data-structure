@@ -9,6 +9,8 @@
  *     }
  * }
  */
+//  if headA goes to the end of list, connect it to headB, the
+//  same as headB, the two nodes will eventually meet at a certain point
 public class Solution {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         if(headA == null || headB == null) return null;

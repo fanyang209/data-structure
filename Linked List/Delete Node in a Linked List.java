@@ -6,6 +6,7 @@
  *     ListNode(int x) { val = x; }
  * }
  */
+//  copy node.next.val to node.val, then delete node.next 
 public class Solution {
     public void deleteNode(ListNode node) {
         if(node == null) return;
