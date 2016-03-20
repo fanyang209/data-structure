@@ -1,3 +1,5 @@
+// use map to store roman and it's corresponding integer. iterate from right
+// to left, calculate sum according to the Roman rule 
 public class Solution {
     public int romanToInt(String s) {
         if(s == null || s.length() == 0)  return -1;

@@ -6,6 +6,9 @@
  *     ListNode(int x) { val = x; }
  * }
  */
+// use a fake node to be the first node of the list, two pointer to
+// track the previous node and current node, iterate the list to find
+// the node whose val is the same as given val
 public class Solution {
     public ListNode removeElements(ListNode head, int val) {
         
