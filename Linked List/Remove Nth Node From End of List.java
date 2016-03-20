@@ -6,34 +6,34 @@
  *     ListNode(int x) { val = x; }
  * }
  */
+// slow-fast pointer 
 public class Solution {
     public ListNode removeNthFromEnd(ListNode head, int n) {
-        int size = 0;
-        ListNode cur = head;
-        while(cur != null){
-            size++;
-            cur = cur.next;
+        if(head == null || head.next == null) return null;
+        
+        ListNode fast = head;
+        ListNode slow = head;
+        
+        // move fast pointer nth step ahead
+        for(int i = 0; i < n; i++){
+            fast = fast.next;
         }
-       
         
-        int index = size - n;
-        ListNode pre = head;
-        
-        if(index == 0){
+        // if the node need to be removed is head
+        if(fast == null){
             head = head.next;
-            pre.next = null;
             return head;
-        }else{ 
-            for(int i = 0; i < index - 1; i++){
-            pre = pre.next;
         }
         
-        pre.next = pre.next.next;
-        
+        // move fast and slow node simultaneously until fast.next is null
+        // then slow node points pre node of target node
+        while(fast.next != null){
+            slow = slow.next;
+            fast = fast.next;
+        }
+
+        // remove target node
+        slow.next = slow.next.next;
         return head;
-            
-        }
-        
-       
     }
 }

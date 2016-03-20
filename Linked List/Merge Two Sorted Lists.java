@@ -6,6 +6,9 @@
  *     ListNode(int x) { val = x; }
  * }
  */
+// use a fake node to be the start node of the new ListNode, everytime
+// compare l1.val with l2.val, append the smaller to the end of the new 
+// list, finally return fakeNode.next which is the first node of the new list 
 public class Solution {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         if(l1 == null) return l2;
