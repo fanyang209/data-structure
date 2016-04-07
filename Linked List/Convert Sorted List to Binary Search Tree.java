@@ -15,7 +15,6 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
- // http://blog.csdn.net/linhuanmars/article/details/23904937
 public class Solution {
     public TreeNode sortedListToBST(ListNode head) {
         if(head == null) return null;
