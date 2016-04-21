@@ -8,23 +8,23 @@
  * }
  */
 public class Solution {
+        int counter = 0 ;
+        int res ;
     public int kthSmallest(TreeNode root, int k) {
-        if(root == null){
-            return 0;
-        }
-        List<Integer> list = new ArrayList<Integer>();
-        dfs(root, list);
-        return list.get(k - 1);
+        dfs( root, k ) ;    
+        return res;
     }
     
-    public void dfs(TreeNode t, List<Integer> list){
-        if(t.left == null && t.right == null){
-            list.add(t.val);
+    public void dfs( TreeNode root, int k ) {
+        if( root == null ) {
             return;
         }
-        if(t.left != null) dfs(t.left, list);
-        list.add(t.val);
-        if(t.right != null) dfs(t.right, list);
-        return;
+        dfs(root.left, k ) ;
+        counter++ ;
+        if(counter == k ) {
+            res = root.val ;
+            return ;
+        }
+        dfs(root.right, k ) ;
     }
 }
