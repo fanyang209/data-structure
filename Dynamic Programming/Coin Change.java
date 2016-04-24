@@ -1,22 +1,21 @@
 public class Solution {
-    public int coinChange(int[] coins, int amount) {
-        // 无效输入的处理
-        if (amount == 0)
-            return 0;
-        if (coins == null || coins.length == 0)
-            return -1;
-            
-        int[] dp = new int[amount + 1];
-        for (int i = 1; i <= amount; i++) {
-            int min = Integer.MAX_VALUE;
-            for (int j = 0; j < coins.length; j++) {
-                if (i >= coins[j] && dp[i - coins[j]] != -1)
-                    min = Math.min(min, dp[i - coins[j]] + 1);
-            }
-            
-            // 根据min的值判断是否能兑换
-            dp[i] = min == Integer.MAX_VALUE ? -1 : min;
+  public int[] countBits(int num) {
+    int[] result = new int[num+1];
+ 
+    int p = 1; //p tracks the index for number x
+    int pow = 1;
+    for(int i=1; i<=num; i++){
+        if(i==pow){
+            result[i] = 1;
+            pow <<= 1;
+            p = 1;
+        }else{
+            result[i] = result[p]+1;
+            p++;
         }
-        return dp[amount];
+ 
     }
+ 
+    return result;
+}
 }
