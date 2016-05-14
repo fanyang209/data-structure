@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 // http://www.voidcn.com/blog/zdavb/article/p-5749387.html
 // http://www.cnblogs.com/grandyang/p/5216856.html
+=======
+>>>>>>> 046dcbadb9d33db3b7c73c606704a01951b51454
 public class Solution {
     public boolean isSelfCrossing(int[] x) {
         int length = x.length;
