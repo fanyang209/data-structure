@@ -1,13 +1,17 @@
-public TreeNode lowestCommonAncestor( TreeNode root, TreeNode one, TreeNode two ) {
+public TreeNode LCA( TreeNode root, TreeNode one, TreeNode two ) {
 	// base case
-	if( root == null || root == one || root == two ) {
+	if( root == null ) {
+	return null ;
+}
+if( root == one || root == two ) {
 	return root ;
 }
-TreeNode ll = lowestCommonAncestor( root.left, one, two ) ;
-TreeNode lr = lowestCommonAncestor( root.right, one, two ) ;
-if( ll != null && rr != null ) {
+// recursive rule
+TreeNode	ll = LCA( root.left, one, two ) ;
+TreeNode	lr = LCA( root.right, one, two ) ;
+if( ll != null && lr != null ) {
 	return root ;
-} else if ( ll != null ) {
+} else if( ll != null ) {
 	return ll ;
 } else {
 	return lr ;
